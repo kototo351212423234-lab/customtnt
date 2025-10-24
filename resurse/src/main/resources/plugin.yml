@@ -1,0 +1,113 @@
+name: CustomTNT
+version: '1.0'
+main: me.org2.customTNT.CustomTNT
+api-version: '1.20'
+author: nonentity1732
+description: Плагін для створення кастомного TNT з налаштовуваними параметрами
+softdepend: [PlaceholderAPI, LuckPerms, WorldGuard, GriefPrevention, Towny, Vault]
+
+commands:
+  tntcam:
+    description: Головна команда CustomTNT
+    usage: /<command> [help|menu|editor|reload|give]
+    aliases: [ctnt, customtnt]
+    permission: customtnt.help
+    permission-message: §cУ вас немає прав для використання цієї команди!
+
+  crafttnt:
+    description: Відкрити GUI для крафту кастомного TNT
+    usage: /<command>
+    aliases: [ctntcraft, customtntcraft]
+    permission: customtnt.craft
+    permission-message: §cУ вас немає прав для крафту TNT!
+
+permissions:
+  customtnt.*:
+    description: Повний доступ до всіх функцій CustomTNT
+    children:
+      customtnt.help: true
+      customtnt.menu: true
+      customtnt.reload: true
+      customtnt.give: true
+      customtnt.create: true
+      customtnt.craft: true
+      customtnt.craft.*: true
+      customtnt.craft.manage: true
+      customtnt.editor: true
+      customtnt.editor.*: true
+      customtnt.place: true
+      customtnt.place.*: true
+    default: op
+
+  customtnt.help:
+    description: Доступ до команди допомоги
+    default: true
+
+  customtnt.menu:
+    description: Доступ до GUI меню
+    default: true
+
+  customtnt.reload:
+    description: Доступ до перезавантаження плагіна
+    default: op
+
+  customtnt.give:
+    description: Доступ до видачі TNT
+    default: op
+
+  customtnt.create:
+    description: Доступ до створення та редагування TNT
+    default: op
+
+  customtnt.place:
+    description: Доступ до встановлення кастомного TNT
+    default: true
+
+  customtnt.place.*:
+    description: Доступ до встановлення всіх типів TNT
+    children:
+      customtnt.place.example: true
+      customtnt.place.aqua_tnt: true
+      customtnt.place.fire_tnt: true
+      customtnt.place.super_tnt: true
+      customtnt.place.mega_tnt: true
+      customtnt.place.nuclear_tnt: true
+      customtnt.place.instant_tnt: true
+      customtnt.place.mining_tnt: true
+    default: true
+
+  customtnt.editor:
+    description: Доступ до редактора GUI
+    default: op
+
+  customtnt.editor.*:
+    description: Повний доступ до редактора GUI
+    children:
+      customtnt.editor: true
+      customtnt.editor.reset: true
+    default: op
+
+  customtnt.editor.reset:
+    description: Доступ до скидання GUI конфігурації
+    default: op
+
+  customtnt.craft:
+    description: Базовий доступ до крафту TNT через /crafttnt
+    default: true
+
+  customtnt.craft.*:
+    description: Доступ до крафту всіх типів TNT
+    children:
+      customtnt.craft.example: true
+      customtnt.craft.aqua_tnt: true
+      customtnt.craft.fire_tnt: true
+      customtnt.craft.super_tnt: true
+      customtnt.craft.mega_tnt: true
+      customtnt.craft.nuclear_tnt: true
+      customtnt.craft.instant_tnt: true
+      customtnt.craft.mining_tnt: true
+    default: true
+
+  customtnt.craft.manage:
+    description: Доступ до керування рецептами крафту
+    default: op

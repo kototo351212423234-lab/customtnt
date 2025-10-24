@@ -1,0 +1,102 @@
+# ============================================
+#     КОНФІГУРАЦІЯ КАСТОМНИХ TNT
+#          CustomTNT Plugin v1.0
+# ============================================
+# Автор: nonentity1732
+# Дата: 12.10.2025
+# ============================================
+#
+# СТРУКТУРА КОНФІГУРАЦІЇ TNT:
+#
+# tnt:
+#   назва_id:                         # Унікальний ID (лише a-z, 0-9, _)
+#     name: '&cНазва'                 # Відображувана назва (підтримує кольори)
+#     description: '&7Опис'           # Опис TNT (показується в lore)
+#     radius: 10.0                    # Радіус вибуху в блоках (0.0-100.0)
+#     power: 8.0                      # Сила вибуху (0.0-100.0)
+#     fuse: 80                        # Час до вибуху в тіках (20 = 1 секунда)
+#     fire: false                     # Створювати вогонь (true/false)
+#     damage-blocks: true             # Руйнувати блоки (true/false)
+#     break-obsidian: false           # Ламати обсидіан (true/false)
+#     break-bedrock: false            # Ламати бедрок (true/false) ⚠️
+#     water-proof: false              # Вибухати під водою (true/false)
+#     damage-entities: true           # Шкодити сутностям (true/false)
+#     entity-damage-multiplier: 1.0   # Множник шкоди (1.0 = 100%)
+#     max-blocks: -1                  # Ліміт блоків (-1 = без ліміту)
+#     drop-items: false               # Випадання предметів (true/false)
+#     drop-chance: 0.3                # Шанс випадання (0.0-1.0)
+#     particles: true                 # Показувати частинки (true/false)
+#     particle-type: EXPLOSION_LARGE  # Тип частинок (Bukkit Particle)
+#     particle-count: 50              # Кількість частинок
+#     custom-sound: false             # Власний звук (true/false)
+#     sound-name: звук                # Назва звуку (Bukkit Sound)
+#     sound-volume: 1.0               # Гучність (0.0-10.0)
+#     sound-pitch: 1.0                # Висота звуку (0.0-2.0)
+#     craft:                          # Рецепт крафту (опціонально)
+#       amount: 1                     # Кількість на виході
+#       craft-from-tnt: vanilla       # Джерело: vanilla або ID іншого TNT
+#
+# ============================================
+
+# ============================================
+#     КОНФІГУРАЦІЯ КАСТОМНИХ TNT
+#          CustomTNT Plugin v1.0
+# ============================================
+
+tnt:
+  example:
+    name: '&cПотужний TNT'
+    description: '&7Дуже потужна вибухівка!'
+    radius: 10.0
+    power: 8.0
+    fuse: 80
+    fire: true
+    damage-blocks: true
+    auto-ignite: true
+    craft:
+      amount: 1
+      shape:
+        - 'AAA'
+        - 'ABA'
+        - 'AAA'
+      ingredients:
+        A: GUNPOWDER
+        B: TNT
+
+  super_tnt:
+    name: '&c&lСУПЕР TNT'
+    description: '&7Дуже потужний вибух!'
+    radius: 18.0
+    power: 12.0
+    fuse: 80
+    fire: true
+    damage-blocks: true
+    auto-ignite: true
+    craft:
+      amount: 1
+      shape:
+        - 'DDD'
+        - 'DTD'
+        - 'DDD'
+      ingredients:
+        D: DIAMOND
+        T: TNT
+
+  instant_tnt:
+    name: '&e&lМиттєвий TNT'
+    description: '&7Вибухає миттєво!'
+    radius: 6.0
+    power: 4.0
+    fuse: 10
+    fire: false
+    damage-blocks: true
+    auto-ignite: true
+    craft:
+      amount: 2
+      shape:
+        - 'RTR'
+        - 'TRT'
+        - 'RTR'
+      ingredients:
+        R: REDSTONE
+        T: TNT
