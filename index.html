@@ -1,1 +1,168 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Документация: CustomTNT</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --bg-light: #f8f9fa;
+            --code-bg: #ecf0f1;
+            --text-color: #333;
+        }
 
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-light);
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            background-color: var(--secondary-color);
+            padding: 1rem;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        h1, h2 {
+            color: var(--primary-color);
+        }
+
+        pre {
+            background-color: var(--code-bg);
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            font-size: 0.9rem;
+        }
+
+        code {
+            font-family: 'Courier New', monospace;
+        }
+
+        .section {
+            margin-bottom: 2rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: var(--primary-color);
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        @media (max-width: 600px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Документация проекта CustomTNT</h1>
+        <p>Кастомная TNT для Minecraft (или другой среды)</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about">О проекте</a></li>
+            <li><a href="#structure">Структура</a></li>
+            <li><a href="#installation">Установка</a></li>
+            <li><a href="#usage">Использование</a></li>
+            <li><a href="#code">Код</a></li>
+            <li><a href="#contact">Контакты</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="section" id="about">
+            <h2>О проекте</h2>
+            <p><strong>Репозиторий:</strong> <a href="https://github.com/kototo351212423234-lab/customtnt">kototo351212423234-lab/customtnt</a></p>
+            <p>Проект <strong>CustomTNT</strong> предназначен для создания кастомной TNT (предположительно для Minecraft или аналогичной платформы). Подробное описание отсутствует, поэтому рекомендуется добавить <code>README.md</code> с информацией о целях, функционале и требованиях.</p>
+        </div>
+
+        <div class="section" id="structure">
+            <h2>Структура проекта</h2>
+            <ul>
+                <li><code>customtnt/</code> — Основная папка с исходным кодом (файлы не видны в корне).</li>
+            </ul>
+            <p>Для детализации структуры укажите конкретные файлы (например, <code>main.py</code>, <code>config.json</code>) через прямые ссылки на GitHub.</p>
+        </div>
+
+        <div class="section" id="installation">
+            <h2>Установка</h2>
+            <ol>
+                <li>Клонируйте репозиторий:
+                    <pre><code>git clone https://github.com/kototo351212423234-lab/customtnt.git</code></pre>
+                </li>
+                <li>Перейдите в папку проекта:
+                    <pre><code>cd customtnt</code></pre>
+                </li>
+                <li>Установите зависимости (если есть, добавьте <code>requirements.txt</code> или аналогичный файл).</li>
+            </ol>
+        </div>
+
+        <div class="section" id="usage">
+            <h2>Использование</h2>
+            <p>Запустите основной скрипт (например, <code>python main.py</code>, если применимо). Тестируйте в соответствующей среде, например, Minecraft с установленными модами. Укажите конкретные шаги для запуска.</p>
+        </div>
+
+        <div class="section" id="code">
+            <h2>Код</h2>
+            <p>Код в папке <code>customtnt/</code> недоступен для анализа. Пожалуйста, предоставьте прямые ссылки на файлы (например, <code>https://github.com/kototo351212423234-lab/customtnt/blob/main/main.py</code>) для добавления примеров или описания.</p>
+        </div>
+
+        <div class="section" id="contact">
+            <h2>Контакты</h2>
+            <p>Автор: <strong>kototo351212423234-lab</strong></p>
+            <p>Для вопросов и предложений создавайте <a href="https://github.com/kototo351212423234-lab/customtnt/issues">issues</a> в репозитории.</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>Документация сгенерирована: 26 октября 2025 г.</p>
+        <p>&copy; 2025 kototo351212423234-lab. Все права защищены.</p>
+    </footer>
+</body>
+</html>
